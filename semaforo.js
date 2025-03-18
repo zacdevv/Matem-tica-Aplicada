@@ -1,13 +1,13 @@
 function semaforo(){
     const estados = [
-        //status: Sinal via P verde://
-        {principal: "verde" , secundaria: "vermelho", pedestres: "vermelho" , mensagem:"Carros da via principal podem seguir ou virar"},
-        //status: Sinal via p Amarelo//
-        {principal: "amarelo" , secundaria: "vermelho", pedestres: "vermelho" , mensagem: "O sinal irá fechar"},
-        //status:Sinal via p Vermelho | sinal pedestres e secundária vermelho//
-        {principal: "vermelho" , secundaria: "verde", pedestres: "verde" , mensagem: "Carros da via secundária podem seguir"},
-        //status: Sinal via p Vermelho | Sinal pedestres & secundária Verde //
-        {principal: "vermelho" , secundaria: "amarelo", pedestres: "vermelho" , mensagem: "O sinal irá fechar"},
+        //status: Sinal via P verde | Sinal Pedestres 2: Verde | Via Pedestres e Secundaria: Vermelho//
+        {principal: "Verde" , secundaria: "Vermelho", pedestres: "Vermelho" , pedestres2: "Verde" , mensagem:"Carros da via principal podem seguir ou virar á direita e pedestres da segunda via podem atravessar"},
+        //status: Sinal via p Amarelo | Secundaria e Pedestres: Vermelho | Pedestres 2: Verde//
+        {principal: "Amarelo" , secundaria: "Vermelho", pedestres: "Vermelho" ,pedestres2: "Verde" , mensagem: "O sinal da via principal irá fechar"},
+        //status:Sinal via p Vermelho | sinal pedestres Verde | Secundária: Amarelo | Pedestre2: Vermelho//
+        {principal: "Vermelho" , secundaria: "Amarelo", pedestres: "Verde" , pedestres2: "Vermelho" , mensagem: "Carros da via secundária podem seguir ou virar á direita"},
+        //status: Sinal via p Vermelho | Sinal pedestres2 & secundária Verde //
+        {principal: "Vermelho" , secundaria: "Amarelo", pedestres: "Verde" , pedestres2: "Vermelho" , mensagem: "O sinal da via secundária irá fechar"},
         //reiniciando ciclo//
     ];
 
@@ -20,6 +20,7 @@ function semaforo(){
         console.log(`Sinal Via Principal:   ${atual.principal}`);
         console.log(`Sinal Via Secundária:  ${atual.secundaria}`);
         console.log(`Sinal Via Pedestres:  ${atual.pedestres}`);
+        console.log(`Sinal Via Pedestres 2: ${atual.pedestres2}`);
         console.log(`Atenção:  ${atual.mensagem}`);
 
 
